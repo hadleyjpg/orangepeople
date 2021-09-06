@@ -1,0 +1,73 @@
+:root {
+    --accent: #EBDED4;
+    --second: #F2D2BD;
+    --third: #DBC7BC;
+    --fourth: #CBD0B5;
+    --title: 'Karla', sans-serif;
+    --copy: 'Karla', sans-serif;
+}
+
+body {
+    background: #B2D6D0;
+    font-family: var(--copy);
+    color: #2E2E2E;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title);
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: #2E2E2E;
+    font-weight: 600;
+}
+
+.nav {
+    display: none;
+}
+
+ul.nav {
+    list-style-type: none;
+}
+
+footer {
+    background: #f5f0e3;
+}
+
+@media screen and (min-width: 900px) {
+    header, .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+    .nav li {
+        margin-left: 40px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    footer {
+        height: 25vh;
+        display: flex;
+        align-items: center;
+    }
+}
