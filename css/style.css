@@ -21,14 +21,6 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--title);
 }
 
-h1 {
-    font-size: 4.5em;
-}
-
-h2 {
-    font-size: 2em;
-}
-
 h3.member-name {
     font-family: var(--copy);
 }
@@ -42,9 +34,17 @@ main {
     flex: 1;
 }
 
+header, .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
 }
 
 a {
@@ -53,12 +53,9 @@ a {
     font-weight: 600;
 }
 
-.nav {
-    display: none;
-}
-
 ul.nav {
     list-style-type: none;
+    text-align: center;
 }
 
 footer {
@@ -84,14 +81,161 @@ svg {
     fill: var(--fourth);
 }
 
+.hero img {
+    width: 100%;
+    margin: 30px 0 10px;
+}
+
+.hero {
+    min-height: 100vh;
+}
+
+#about {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media screen and (max-width: 1454px) {
+    .about-small {
+        display: none !important;
+    }
+}
+
+.about-text {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#team .member-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.member {
+    width: 50%;
+}
+
+.member-hover {
+    display: block;
+    padding: 10px 20px;
+    background: var(--second);
+}
+
+.team-text {
+    width: 80%;
+    margin: 30px auto;
+}
+
+#industries {
+    margin: 70px 0;
+}
+
+.industries-box {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.industries-box svg {
+    align-self: flex-end;
+}
+
+.industries-box:first-child {
+    background: var(--second);
+}
+
+.industries-box:nth-child(3) {
+    background: var(--third);
+}
+
+.industries-box:nth-child(5) {
+    background: var(--fourth);
+    color: var(--third);
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    align-items: center;
+}
+
+footer img {
+    width: 25%;
+}
+
+footer .container > * {
+    margin: 10px 0;
+}
+
+ul.nav > * {
+    margin: 10px 0;
+}
+
+.member img {
+    width: 100%;
+}
+
+.blog-side > * {
+    margin-bottom: 40px;
+}
+
+article.first {
+    background-image: url('../images/blog-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 198.95px;
+    position: relative;
+    margin-bottom: 175px;
+}
+
+.article-text.first {
+    bottom: -140px;
+    position: absolute;
+}
+
+.blog-side img {
+    width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+    #insights .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #insights .container > * {
+        width: 48%;
+    }
+
+    #insights .container > article img {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .member {
+        width: 25%;
+    }
+}
+
 @media screen and (min-width: 900px) {
-    header, .container {
-        width: 80%;
-        margin: 0 auto;
+    h1 {
+        font-size: 4.5em;
+    }
+
+    h2 {
+        font-size: 2em;
     }
 
     header {
         margin-top: 50px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: inherit;
     }
 
     .nav {
@@ -115,12 +259,18 @@ svg {
 
     footer .container {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+    }
+
+    footer img {
+        width: 63px;
     }
 
     .hero {
         background-image: url('../images/hero-bg.png');
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         padding-top: 80px;
     }
 
@@ -136,14 +286,24 @@ svg {
 
     #about {
         display: flex;
+        flex-direction: row;
         height: 100vh;
         margin-top: 50px;
         background-image: url('../images/about-bg.png');
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     .about-small {
+        display: block;
         align-self: flex-end;
+        width: 342px;
+        height: 500px;
+    }
+
+    .about-big {
+        width: 650px;
+        height: 669px;
     }
 
     .about-text {
@@ -161,16 +321,16 @@ svg {
     #industries .container {
         display: flex;
         flex-wrap: wrap;
-
         align-items: center;
     }
 
     .industries-box {
-        width: 27.65%;
-        min-height: 200px;
+        width: 33.333%;
+        min-height: 250px;
         padding: 40px;
         display: flex;
         flex-direction: column;
+        box-sizing: border-box;
     }
 
     .industries-box svg {
@@ -182,40 +342,13 @@ svg {
         display: block;
     }
 
-    .industries-box:first-child {
-        background: var(--second);
-    }
-
-    .industries-box:nth-child(3) {
-        background: var(--third);
-    }
-
-    .industries-box:nth-child(5) {
-        background: var(--fourth);
-        color: var(--third);
-    }
-
     #insights {
         display: flex;
         min-height: 100vh;
         align-items: center;
         background-image: url('../images/insights-bg.png');
-        background-size: cover;
-    }
-
-    #insights .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    #insights .container > * {
-        width: 48%;
-    }
-
-    #insights .container > article img {
-        width: 100%;
-        margin-bottom: 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     .blog-side > * {
@@ -224,15 +357,17 @@ svg {
 
     .blog-side img {
         margin-right: 40px;
-        margin-bottom: 50px;
         width: 45%;
+        object-fit: cover;
     }
 
     article.first {
         position: relative;
         background-image: url('../images/blog-1.jpg');
         background-size: cover;
+        background-repeat: no-repeat;
         height: 457.68px;
+        margin-bottom: 50px;
     }
 
     .article-text.first {
@@ -241,6 +376,10 @@ svg {
         background: var(--second);
         width: 75%;
         padding: 30px;
+    }
+
+    .article-text.first button {
+        display: none;
     }
 
     .cta {
@@ -256,7 +395,8 @@ svg {
         min-height: 100vh;
         align-items: center;
         background-image: url('../images/team-bg.png');
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     #team .member-container {
@@ -267,7 +407,6 @@ svg {
     }
 
     .member {
-        width: 25%;
         justify-content: flex-end;
         position: relative;
     }
@@ -285,7 +424,6 @@ svg {
     }
 
     .member img {
-        width: 100%;
         height: 100%;
     }
 
