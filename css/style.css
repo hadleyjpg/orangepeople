@@ -80,6 +80,10 @@ button, a:hover {
     width: 90%;
 }
 
+svg {
+    fill: var(--fourth);
+}
+
 @media screen and (min-width: 900px) {
     header, .container {
         width: 80%;
@@ -115,8 +119,13 @@ button, a:hover {
     }
 
     .hero {
-        display: flex;
+        background-image: url('../images/hero-bg.png');
+        background-size: cover;
         padding-top: 80px;
+    }
+
+    .hero .container {
+        display: flex;
         align-items: center;
     }
 
@@ -129,6 +138,8 @@ button, a:hover {
         display: flex;
         height: 100vh;
         margin-top: 50px;
+        background-image: url('../images/about-bg.png');
+        background-size: cover;
     }
 
     .about-small {
@@ -188,6 +199,8 @@ button, a:hover {
         display: flex;
         min-height: 100vh;
         align-items: center;
+        background-image: url('../images/insights-bg.png');
+        background-size: cover;
     }
 
     #insights .container {
@@ -215,6 +228,21 @@ button, a:hover {
         width: 45%;
     }
 
+    article.first {
+        position: relative;
+        background-image: url('../images/blog-1.jpg');
+        background-size: cover;
+        height: 457.68px;
+    }
+
+    .article-text.first {
+        position: absolute;
+        bottom: 0;
+        background: var(--second);
+        width: 75%;
+        padding: 30px;
+    }
+
     .cta {
         background: var(--fourth);
         width: 100%;
@@ -227,6 +255,8 @@ button, a:hover {
         display: flex;
         min-height: 100vh;
         align-items: center;
+        background-image: url('../images/team-bg.png');
+        background-size: cover;
     }
 
     #team .member-container {
