@@ -1,16 +1,17 @@
 :root {
-    --accent: #EBDED4;
-    --second: #F2D2BD;
-    --third: #DBC7BC;
-    --fourth: #CBD0B5;
-    --title: 'Karla', sans-serif;
+    --accent: #B2D6D0;
+    --second: #F5F650;
+    --third: #f5f0e3;
+    --fourth: #2e2e2e;
+    --title: 'ivyjournal', sans-serif;
     --copy: 'Karla', sans-serif;
+    --default-shadow: rgba(149, 146, 180, 0.25);
 }
 
 body {
-    background: #B2D6D0;
+    background: var(--accent);
     font-family: var(--copy);
-    color: #2E2E2E;
+    color: var(--fourth);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -18,6 +19,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--title);
+}
+
+h1 {
+    font-size: 4.5em;
 }
 
 main {
@@ -31,7 +36,7 @@ header {
 
 a {
     text-decoration: none;
-    color: #2E2E2E;
+    color: var(--fourth);
     font-weight: 600;
 }
 
@@ -44,7 +49,22 @@ ul.nav {
 }
 
 footer {
-    background: #f5f0e3;
+    background: var(--third);
+}
+
+button {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+button, a:hover {
+    text-decoration: underline 5px var(--second);
+    cursor: pointer;
+}
+
+.overlay{
+    margin-left: -150px;
+    width: 90%;
 }
 
 @media screen and (min-width: 900px) {
@@ -53,8 +73,13 @@ footer {
         margin: 0 auto;
     }
 
+    header {
+        margin-top: 50px;
+    }
+
     .nav {
         display: flex;
+        align-items: center;
     }
 
     .nav li {
@@ -69,5 +94,20 @@ footer {
         height: 25vh;
         display: flex;
         align-items: center;
+    }
+
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero {
+        display: flex;
+        padding-top: 80px;
+    }
+
+    .hero img {
+        width: 52%;
+        margin-right: 80px;
     }
 }
