@@ -5,7 +5,7 @@
     --fourth: #2e2e2e;
     --title: 'ivyjournal', sans-serif;
     --copy: 'Karla', sans-serif;
-    --default-shadow: rgba(149, 146, 180, 0.25);
+    --default-shadow: rgba(149, 186, 180, 0.45);
 }
 
 body {
@@ -23,6 +23,19 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 4.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3.member-name {
+    font-family: var(--copy);
+}
+
+h4.member-title {
+    font-family: var(--copy);
+    font-weight: 400;
 }
 
 main {
@@ -104,10 +117,150 @@ button, a:hover {
     .hero {
         display: flex;
         padding-top: 80px;
+        align-items: center;
     }
 
     .hero img {
         width: 52%;
         margin-right: 80px;
+    }
+
+    #about {
+        display: flex;
+        height: 100vh;
+        margin-top: 50px;
+    }
+
+    .about-small {
+        align-self: flex-end;
+    }
+
+    .about-text {
+        align-self: center;
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    #industries {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    #industries .container {
+        display: flex;
+        flex-wrap: wrap;
+
+        align-items: center;
+    }
+
+    .industries-box {
+        width: 27.65%;
+        min-height: 200px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .industries-box svg {
+        align-self: flex-end;
+        display: none;
+    }
+
+    .industries-box:hover svg {
+        display: block;
+    }
+
+    .industries-box:first-child {
+        background: var(--second);
+    }
+
+    .industries-box:nth-child(3) {
+        background: var(--third);
+    }
+
+    .industries-box:nth-child(5) {
+        background: var(--fourth);
+        color: var(--third);
+    }
+
+    #insights {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    #insights .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #insights .container > * {
+        width: 48%;
+    }
+
+    #insights .container > article img {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .blog-side > * {
+        display: flex;
+    }
+
+    .blog-side img {
+        margin-right: 40px;
+        margin-bottom: 50px;
+        width: 45%;
+    }
+
+    .cta {
+        background: var(--fourth);
+        width: 100%;
+        min-height: 100px;
+        color: var(--third);
+        text-align: center;
+    }
+
+    #team {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    #team .member-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: 65%;
+    }
+
+    .member {
+        width: 25%;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    .member:hover .member-hover {
+        display: block;
+        bottom: 0;
+        position: absolute;
+        padding: 20px 30px;
+        background: var(--second);
+    }
+
+    .member-hover {
+        display: none;
+    }
+
+    .member img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .team-text {
+        width: 20%;
+        padding: 75px;
     }
 }
